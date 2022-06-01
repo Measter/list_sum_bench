@@ -1,6 +1,7 @@
 A quick benchmark of three ways of summing integers in both Rust (rustc 1.61) and C# (.Net 6). The three ways are:
 
- * A `for` loop over the range of indices. In C# this uses `for`, in Rust a `for` loop over the range `0..length`.
+ * A `for` loop over the range of indices which are then used to index into the list. In C# this uses `for`, in Rust a
+   `for` loop over the range `0..length`.
  * A `foreach` loop over the collection. In C# this uses `foreach`, in Rust a `for` loop over the collection.
  * The Iterator/LINQ method. In C# this uses the `Aggregate` method (the `Sum` method overflow checks), while in Rust
    the `sum` method was used.
